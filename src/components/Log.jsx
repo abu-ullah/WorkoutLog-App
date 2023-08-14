@@ -1,10 +1,10 @@
 import React from "react";
 
-function Log() {
+function Log(props) {
     return (
         <div className="log">
-            <h1>This is the title</h1>
-            <p>This is the content</p>
+            <h1>{props.name}</h1>
+            <p>{props.last_updated}</p>
         </div>
     );
 }
