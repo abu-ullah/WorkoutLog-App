@@ -17,11 +17,23 @@ header {
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-
 header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+}
+.btnAdd {
+  background-color: #fff;
+  color: #f5ba13;
+  font-size: 50px;
+  padding: 0.3em 0.6em;;
+  border-radius: 30%;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* Fixed positioning */
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
 }
 
 footer {
@@ -50,10 +62,59 @@ footer p {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
-
 .log p {
   font-size: 1.1em;
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+.log-icons {
+  margin-top: 0.5rem;
+  float: right;
+  margin-right: 1.5rem;
+}
+.log-icons:hover {
+  font-size: 23px;
+  color: red;
+}
+
+/* Login Form */
+form {
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+  margin: 10% auto;
+  padding: 0 0;
+}
+form h1 {
+  margin: 2% auto;
+}
+form input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+form button {
+  appearance: none;
+  outline: 0;
+  background-color: #f5ba13;
+  border: 0;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 18px;
+}
+form button:hover {
+  background-color: white;
+  color: #f5ba13;
 }
