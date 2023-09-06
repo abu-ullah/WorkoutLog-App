@@ -19,26 +19,6 @@ function createLog(log) {
   );
 }
 
-function renderConditionally() {
-  if (isLoggedIn === true) {
-    return (
-      <div>
-        <Header />
-          {logs.map(createLog)}
-          <Log
-              name="Test Log"
-              last_updated="2023-07-12T12:33:17.000Z"
-          />
-        <Footer />
-      </div>
-    );
-  } else {
-    return (
-      <Login />
-    );
-  }
-}
-
 function App() {
     return (
         <div>
