@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import DeletionConfirmation from "./DeletionConfirmation";
+import LogDetails from "./LogDetails";
 
 function Log(props) {
 
   const [isMouseOver, setMouseOver] = useState(false)
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
+  const [showLogDetails, setShowLogDetails] = useState(false);
 
   function handleMouseOver() {
     setMouseOver(true)
@@ -30,6 +32,10 @@ function Log(props) {
     setShowDeleteConfirmation(false);
   }
 
+  function handleLogClicked() {
+    setShowLogDetails(true);
+  }
+
   return (
       <div className="log">
           <h1>{props.name}</h1>
@@ -41,6 +47,7 @@ function Log(props) {
                   }}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
+            onClick={handleLogClicked}
           ></i>
 
           {showDeleteConfirmation && (
@@ -48,6 +55,10 @@ function Log(props) {
               onConfirm={handleDeleteConfirmed}
               onCancel={handleDeleteCancelled}
             />
+          )}
+
+          {showLogDetails && (
+            <LogDetails props={props} />
           )}
       </div>
   );
